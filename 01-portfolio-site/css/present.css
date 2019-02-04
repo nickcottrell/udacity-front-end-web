@@ -1,0 +1,40 @@
+body {
+	background-color:#222;
+}
+
+.blue-column {
+	background-color: blue;
+	height:200px;
+}
+
+.green-column {
+	background-color: green;
+	height:200px;
+}
+
+.container {
+	margin:20 50px;
+	background-color: red;
+}
+
+@media screen and (min-width: 800px) {
+
+	.row {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+	}
+
+	.column {
+		display: flex;
+		flex-direction: column;
+		flex-basis: 100%;
+		flex: 1;
+	}
+} /*end @media*
+
+
+
+
+
