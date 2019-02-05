@@ -20,10 +20,12 @@
 }
 
 html, body {
-	background-color: #222;
 	color: white;
 	height: 100%;
 	width: 100%;
+	margin:0;
+	padding:0;
+
 }
 
 /*main flexbox frame*/
@@ -46,6 +48,7 @@ header, main, footer {
 
 header {
 	min-height: 56px;
+	background-color:rgba(102,102,102,0.5);
 }
 
 main {
@@ -57,39 +60,67 @@ article {
 }
 
 footer {
-	min-height: 100px
+	min-height: 100px;
+	background-color:#222;
 }
 
 
-.main_logo {
+@media screen and (max-width: 639px) {
 
+	html, body {
+
+	}
+
+	.main_logo {
+	
+	}
+
+	.hero {
+	display:flex;
+	flex-direction: column;
+	}
+
+	.hero_image {
+	order: 2;
+	width: 100%;
+	}
+
+	.hero_header {
+	order: 1;
+	width: 100%;
+	}
+
+	.contact_info {
+	display:flex;
+	flex-direction: column;
+	}
+
+	.featured_headline {
+	order: 3;
+	}
+
+	.btn_zone_contact {
+	order: 1;
+	}
+
+	.btn_zone_resume {
+	order: 2;
+	}
+
+	.featured_projects {
+
+	}
+
+	.project_item {
+		height:220px;
+	}
 }
 
-.hero_image {
 
-}
-
-.hero_header {
-
-}
-
-.btn_zone_contact {
-
-}
-
-.btn_zone_contact {
-
-}
-
-.featured_projects {
-
-}
-
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
 
  	main {
-		max-width: 768px;
+		max-width: 960px;
 		margin: auto;
 	}
 
@@ -106,6 +137,17 @@ footer {
 		flex-direction: column;
 		flex-basis: 100%;
 		flex: 1;
+	}
+
+
+	.featured_headline {
+		flex: 2;
+	}
+
+	.btn_zone_contact {
+	}
+
+	.btn_zone_resume {
 	}
 
 
