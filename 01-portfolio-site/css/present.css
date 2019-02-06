@@ -1,32 +1,71 @@
-/*REMOVE THESE STYLES*/
-.blue {
-	background-color: blue;
-}
-
-.green {
-	background-color: green;
-}
-
-.red {
-	background-color: red;
-}
-
-.orange {
-	background-color: orange;
-}
-
-.yellow {
-	background-color: yellow;
-}
-
-html, body {
-	color: white;
+html {
+	background-image:url("../img/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+	margin:0;
+	padding:0;
+	font-family: 'Zilla Slab', serif;
+} 
+	
+body {
+	/*background-image:url("../img/BG@2x.png");
+	background-size: cover;*/
+	color: black;
 	height: 100%;
 	width: 100%;
 	margin:0;
 	padding:0;
 
 }
+
+p {
+	font-family: 'Zilla Slab', serif;
+
+}
+
+h1 {
+
+}
+
+h2 {
+  	font-family: 'Alfa Slab One', sans-serif;
+  	font-size:48px;
+  	font-weight: normal;
+  	color:white;
+}
+
+h3 {
+  	font-family: 'Alfa Slab One', sans-serif;
+    font-weight: normal;
+    color:#9B9B9B;
+    font-size:28px;
+
+}
+
+img {
+	align-self:center;
+}
+
+
+a:link {
+display:block;
+max-height:48px;
+width:100%;
+padding:10px;
+text-decoration: none;
+text-align: center;
+display: pointer;
+font-family: 'Alfa Slab One', sans-serif;
+font-size:20px;
+font-weight: normal;
+color:#fff;
+background-color:#9B9B9B;
+margin:0 10px;
+}
+
+
 
 /*main flexbox frame*/
 article {
@@ -53,7 +92,6 @@ header {
 
 main {
 	width:100%;
-	background-color: #333;
 }
 
 article {
@@ -63,6 +101,31 @@ footer {
 	min-height: 100px;
 	background-color:#222;
 }
+
+	.hero_header {
+	padding:0 30px;
+}
+
+.featured_projects {
+	display:flex;
+	background-color: #fff;
+	width:100%;
+}
+
+.project_item {
+	display:flex;
+	height:	215px;
+	margin: auto;
+	background-color:white;
+	box-shadow: 0 0px 30px 0px #ccc;
+	width:80%;
+	margin:0 auto 20px auto;
+	flex: 2;
+	/*flex-basis: 100%;*/
+}
+
+	.featured_headline {
+	}
 
 
 @media screen and (max-width: 639px) {
@@ -83,6 +146,9 @@ footer {
 	.hero_image {
 	order: 2;
 	width: 100%;
+	}
+
+	.hero_image img {
 	}
 
 	.hero_header {
@@ -108,11 +174,19 @@ footer {
 	}
 
 	.featured_projects {
+	display: flex;
+	flex-direction: column;
+	/*flex-basis: 100%;*/
+	flex:1;
+		margin:0 -2px 100px -2px;
+
 
 	}
 
 	.project_item {
-		height:220px;
+		width:80%;
+		margin:0 auto 20px auto;
+		flex: 2;
 	}
 }
 
@@ -135,19 +209,27 @@ footer {
 	.column {
 		display: flex;
 		flex-direction: column;
-		flex-basis: 100%;
+		/*flex-basis: 100%;*/
 		flex: 1;
 	}
-
 
 	.featured_headline {
 		flex: 2;
 	}
 
 	.btn_zone_contact {
+		width:80%;
 	}
 
 	.btn_zone_resume {
+		width:80%;
+
+	}
+
+	.project_item {
+	width:80%;
+	margin:0 10px 100px 10px;
+	flex: 2;
 	}
 
 
