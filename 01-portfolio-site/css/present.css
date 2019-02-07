@@ -1,7 +1,8 @@
 html {
-	background-image:url("../img/background.jpg");
+	background-image:url(../img/background.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-color:#FDF8F2;
 	height: 100%;
 	width: 100%;
 	margin:0;
@@ -10,65 +11,16 @@ html {
 } 
 	
 body {
-	/*background-image:url("../img/BG@2x.png");
-	background-size: cover;*/
 	color: black;
 	height: 100%;
 	width: 100%;
 	margin:0;
 	padding:0;
-
 }
 
-p {
-	font-family: 'Zilla Slab', serif;
-
-}
-
-h1 {
-
-}
-
-h2 {
-  	font-family: 'Alfa Slab One', sans-serif;
-  	font-size:48px;
-  	font-weight: normal;
-  	color:white;
-}
-
-h3 {
-  	font-family: 'Alfa Slab One', sans-serif;
-    font-weight: normal;
-    color:#9B9B9B;
-    font-size:28px;
-
-}
-
-img {
-	align-self:center;
-}
-
-
-a:link {
-display:block;
-max-height:48px;
-width:100%;
-padding:10px;
-text-decoration: none;
-text-align: center;
-display: pointer;
-font-family: 'Alfa Slab One', sans-serif;
-font-size:20px;
-font-weight: normal;
-color:#fff;
-background-color:#9B9B9B;
-margin:0 10px;
-}
-
-
-
-/*main flexbox frame*/
-article {
+/*main flexbox frame
+-----------------------------------------------------*/
+.container {
 	min-height: 100%;
 	display:flex;
 	flex-direction: column;
@@ -82,11 +34,148 @@ main {
 header, main, footer {
     flex-shrink: 0;
 }
-/*end main flexbox frame*/
+
+/*base typography
+-----------------------------------------------------*/
+p {
+	font-family: 'Zilla Slab', serif;
+}
+
+footer p {
+	text-align: center;
+	color:#fff;
+}
+
+h1 {
+	font-family: 'Alfa Slab One', sans-serif;
+	font-size:48px;
+	font-weight: normal;
+	color:white;
+	max-width:100%;
+}
+
+h2 {
+	font-family: 'Alfa Slab One', sans-serif;
+	font-weight: normal;
+	color:#9b9b9b;
+	font-size:28px;
+	max-width:100%;
+	padding-left:8%;
+}
+
+h3 {
+	font-family: 'Alfa Slab One', sans-serif;
+	font-weight: normal;
+	color:#9b9b9b;
+	font-size:18px;
+	max-width:100%;
+	margin:10px 0;
+}
+
+/*Essentials
+-----------------------------------------------------*/
+img {
+	align-self:center;
+}
+
+a:link {
+	font-family: 'Zilla Slab', serif;
+	text-decoration:none;
+	color:#9b9b9b;
+}
+
+a:visited {
+	text-decoration:none;
+	color:#9b9b9b;
+}
+
+a:hover {
+	text-decoration:none;
+	color:#757575;
+}
+
+a:active {
+	text-decoration:none;
+	color:#757575;
+}
+
+/*CTA buttons
+-----------------------------------------------------*/
+a:link.cta {
+	display:block;
+	max-height: 48px;
+	width: 80%;
+	padding: 10px;
+	text-decoration: none;
+	text-align: center;
+	display: pointer;
+	font-family: 'Alfa Slab One', sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	color: #fff;
+	background-color: #9b9b9b;
+	border-radius: 2px;
+	border: 3px solid #9b9b9b;
+	margin:0 auto 10px auto;
+}
+
+a:visited.cta {
+	color:#fff;
+	border: 3px solid #9b9b9b;
+	background-color: #9b9b9b;
+}
+
+a:active.cta {
+	color:#fff;
+	border: 3px solid #757575;
+	border-color:#757575;
+}
+
+a:hover.cta {
+	background-color:#757575;
+	border: 3px solid #757575;
+}
+
+a:link.secondary {
+	display: block;
+	max-height: 48px;
+	width: 80%;
+	padding:10px;
+	text-decoration: none;
+	text-align: center;
+	display: pointer;
+	font-family: 'Alfa Slab One', sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	color: #fff;
+	background-color: none;
+	margin: 0 auto;
+	border-radius: 2px;
+	border: 3px solid #9b9b9b;
+}
+
+a:visited.secondary {
+	border: 3px solid #9b9b9b;
+	color: #9b9b9b;
+	}
+
+a:active.secondary {
+	border: 3px solid #757575;
+	color:#757575;
+	}
+
+a:hover.secondary {
+	border: 3px solid #757575;
+	color:#757575;
+	}
 
 
+/*elements
+-----------------------------------------------------*/
 header {
-	min-height: 56px;
+	max-height: 56px;
+	padding-top: 4px;
+	padding-bottom:4px;
 	background-color:rgba(102,102,102,0.5);
 }
 
@@ -94,93 +183,104 @@ main {
 	width:100%;
 }
 
-article {
-}
-
 footer {
 	min-height: 100px;
 	background-color:#222;
 }
 
-	.hero_header {
-	padding:0 30px;
+.main_logo_wrap {
+	width:200px;
+	margin:auto;
+}
+
+.hero_header {
+	max-width: 80%;
+	margin:auto;
 }
 
 .featured_projects {
 	display:flex;
-	background-color: #fff;
 	width:100%;
 }
 
 .project_item {
-	display:flex;
-	height:	215px;
+	min-height:	215px;
 	margin: auto;
+	padding:20px;
 	background-color:white;
 	box-shadow: 0 0px 30px 0px #ccc;
-	width:80%;
+	max-width:80%;
 	margin:0 auto 20px auto;
 	flex: 2;
-	/*flex-basis: 100%;*/
+	flex-basis: 100%;
 }
 
-	.featured_headline {
-	}
+.project_item p {
+	color:#9b9b9b;
+	max-width: 100%;
+	margin:0 0;
+}
 
+.project_item h2 {
+}
 
+.ext_link {
+	display:block;
+	text-align:right;
+	margin-top:30px;
+}
+
+.featured_headline {
+}
+
+.hero_image img {
+	max-width:100%;
+}
+
+/*Single Column
+-----------------------------------------------------*/
 @media screen and (max-width: 639px) {
 
-	html, body {
-
-	}
-
-	.main_logo {
-	
-	}
-
 	.hero {
-	display:flex;
-	flex-direction: column;
+		display:flex;
+		flex-direction: column;
 	}
 
 	.hero_image {
-	order: 2;
-	width: 100%;
+		order: 2;
+		width: 100%;
 	}
 
 	.hero_image img {
 	}
 
 	.hero_header {
-	order: 1;
-	width: 100%;
+		order: 1;
+		width: 100%;
 	}
 
 	.contact_info {
-	display:flex;
-	flex-direction: column;
+		display:flex;
+		flex-direction: column;
 	}
 
 	.featured_headline {
-	order: 3;
+		order: 3;
 	}
 
 	.btn_zone_contact {
-	order: 1;
+		order: 1;
 	}
 
 	.btn_zone_resume {
-	order: 2;
+		order: 2;
 	}
 
 	.featured_projects {
-	display: flex;
-	flex-direction: column;
-	/*flex-basis: 100%;*/
-	flex:1;
+		display: flex;
+		flex-direction: column;
+		flex:1;
 		margin:0 -2px 100px -2px;
-
-
 	}
 
 	.project_item {
@@ -190,7 +290,8 @@ footer {
 	}
 }
 
-
+/* Mutli-Column
+-----------------------------------------------------*/
 @media screen and (min-width: 640px) {
 
  	main {
@@ -198,44 +299,54 @@ footer {
 		margin: auto;
 	}
 
+	a:link.cta {
+		max-width: 80%;
+	}	
+
+	a:visited.cta {
+	}
+
+	a:active.cta {
+	}
+
+	a:hover.cta {
+	}
+
 	.row {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		width: 100%;
-		/*min-height: 200px;*/
 	}
 
 	.column {
 		display: flex;
 		flex-direction: column;
-		/*flex-basis: 100%;*/
 		flex: 1;
+	}
+
+	.main_logo_wrap {
+		width: 100%; 
 	}
 
 	.featured_headline {
 		flex: 2;
 	}
 
+	.contact_info {
+	}
+
 	.btn_zone_contact {
-		width:80%;
 	}
 
 	.btn_zone_resume {
-		width:80%;
 
 	}
 
 	.project_item {
-	width:80%;
-	margin:0 10px 100px 10px;
-	flex: 2;
+		width:80%;
+		margin:0 10px 100px 10px;
+		flex: 2;
 	}
 
-
-} /*end @media*
-
-
-
-
-
+}

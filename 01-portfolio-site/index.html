@@ -3,51 +3,94 @@
 <head>
 <title>Hello Flexbox</title>
 <meta charset="utf-8">
+<meta name="viewport" content="width-device-width, initial-scale=1"> 
 <script src="js/behave.js"></script>
 <link rel="stylesheet" href="css/present.css">
-<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Zilla+Slab" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
 </head>
 <body>
 
-<article>
+<div class="container">
 	<header>
 		<div class="row">
-			<div class="column"></div>
-			<div class="column main_logo">logo</div>
-			<div class="column"></div>
+			<div class="column main_logo_wrap">
+				<img src="img/3dmath-prism.svg" alt="3DMATH Prism">
+			</div>
 		</div>
 	</header>
 	
 	<main>
+		
 		<div class="row hero">
-			<div class="column hero_image"><img style="max-width:100%;" src="img/Phone@3x.png" alt="Mobile Phone"> </div>
-			<div class="column hero_header"><h2>Let's make your vision a reality</h2></div>
-		</div>
-			<div class="row contact_info">
-				<div class="column featured_headline"><h3>Featured Projects</h3></div>
-				<div class="column btn_zone_contact"><a class="cta" href="#">say hello</a></div>
-				<div class="column btn_zone_resume"><a class="cta secondary" href="#">get resume</a></div>
+		
+			<div class="column hero_image">
+				<img src="img/Phone@3x.png" alt="Mobile Phone">
 			</div>
+		
+			<div class="column hero_header">
+				<h1>Let’s make your vision a reality</h1>
+			</div>
+		
+		</div>
+		
+		<div class="row contact_info">
+			
+			<div class="column featured_headline">
+				<h2>Featured Projects</h2>
+			</div>
+			
+			<div class="column btn_zone_contact">
+				<a class="cta" href="https://www.linkedin.com/in/nickcottrell/">Say Hello</a>
+			</div>
+			
+			<div class="column btn_zone_resume">
+				<a class="secondary" href="https://www.dropbox.com/s/ji26f8xpu9r3qwy/NickCottrell-SrProductDesigner-UIUX-jan2019-1.pdf?dl=0">Get Resume</a>
+			</div>
+		
+		</div>
 
 			<div class="row">
+				
 				<div class="column featured_projects">
+					
 					<div class="row">
-						<div class="column project_item"><h4>sample project</h4></div>
-						<div class="column project_item"><h4>sample project</h4></div>
-						<div class="column project_item"><h4>sample project</h4></div>
+						
+						<div class="column project_item">
+							<img width="100%" src="img/sample_01.jpg" alt="Grid System">
+							<h3>Responsive Grid System</h3>
+							<p>A SCSS responsive website framework</p>
+							<a class="ext_link" target="_blank" href="https://github.com/nickcottrell/lining-for-layout">View Project</a>
+						</div>
+						
+						<div class="column project_item">
+							<img width="100%" src="img/sample_02.jpg" alt="Virtual Reality">
+							<h3>Google VR Apps</h3>
+							<p>Projects completed during my VR nanodegree</p>
+							<a class="ext_link" target="_blank" href="https://github.com/nickcottrell/udacity-vr-t1">View Project</a>
+						</div>
+						
+						<div class="column project_item">
+							<img width="100%" src="img/sample_03.jpg" alt="Voice Interface">
+							<h3>Voice Interface</h3>
+							<p>Experimental Javascript based voice interaction</p>
+							<a class="ext_link" target="_blank" href="https://github.com/nickcottrell/lapel">View Project</a>
+						</div>
+					
 					</div>
+				
 				</div>
+			
 			</div>
-		</div>
 	</main>
 	
 	<footer>
 		<div class="row">
-			<div class="column">footer</div>
+			<div class="column"><p>©2019 3DMATH, All Rights Reserved.</p></div>
 		</div>
 	</footer>
 
-</article>
+</div>
 
 </body>
 </html>
